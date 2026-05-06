@@ -62,11 +62,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
-      {/* Bottom bar */}
-      <div className="bg-yellow-600 text-center text-xs text-black py-2">
-        Copyright © 2024, ataraxis.ai, All Rights Reserved.
-      </div>
     </footer>
   );
 }

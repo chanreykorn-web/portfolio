@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "id": "fixed_scripts",
   "scripts": {
     "dev": "vite",
     "host": "vite --host",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "lucide-react": "^1.8.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet": "^6.1.0",
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.14.0",
     "styled-components": "^6.1.19",

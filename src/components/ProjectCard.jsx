@@ -1,9 +1,11 @@
 import React from "react";
 import projects from "../data/project.js";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function ProjectCard() {
   const navigate = useNavigate();
+
   return (
     <>
       {projects.map((project, index) => (
@@ -53,6 +55,57 @@ export default function ProjectCard() {
           </div>
         </div>
       ))}
+    </>
+  );
+}
+
+export function Helmets() {
+  const url = `https://chanreykorn.com/projects/detail/1555066931-4365d14bab8c`;
+  return (
+    <>
+      <Helmet>
+        {/* BASIC SEO */}
+        <title>Our Projects | Web Development & IT Solutions</title>
+        <meta
+          name="title"
+          content="Our Projects | Web Development & IT Solutions"
+        ></meta>
+        <meta
+          name="description"
+          content="Explore our latest web development and IT projects including system design, network setup, and modern applications in Cambodia."
+        />
+
+        {/* 🔥 OPEN GRAPH (Facebook, LinkedIn, Google) */}
+        <meta property="og:title" content="Our Projects | Portfolio" />
+        <meta
+          property="og:description"
+          content="Check out our professional web development and IT support projects."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+        />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+
+        {/* 🔥 EXTRA (Better preview control) */}
+        <meta property="og:site_name" content="CHANREY KORN" />
+
+        {/* 🔥 TWITTER SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Projects | Portfolio" />
+        <meta
+          name="twitter:description"
+          content="Check out our professional web development and IT support projects."
+        />
+        <meta
+          name="twitter:image"
+          content="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+        />
+
+        {/* 🔥 CANONICAL URL (Very important for Google) */}
+        <link rel="canonical" href={url} />
+      </Helmet>
     </>
   );
 }

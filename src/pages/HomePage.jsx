@@ -2,15 +2,14 @@ import React from "react";
 import Nav from "../components/Nav";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-// import SettingsInputAntennaSharpIcon from "@material-ui/icons/SettingsInputAntennaSharp";
 import SensorsOutlinedIcon from "@mui/icons-material/SensorsOutlined";
 import ProjectCard from "../components/ProjectCard";
 import { SkillsIconGrid } from "../components/SkillsIconGrid";
 import { SectionAboutPages } from "./AboutPage";
 import Footer from "../components/Footer";
-// import { ServiceSection } from "./ServerPage";
 import ServiceItem from "./ServerPage";
 import { Helmet } from "react-helmet-async";
+import { SectionContact } from "./ContactPage";
 
 const dataOurService = [
   {
@@ -50,12 +49,16 @@ const HomePage = () => {
       <Helmet>
         {/* BASIC SEO */}
         <title>chanrey korn</title>
-        <meta name="description" content={''} />
+        <meta name="title" content="chanrey korn"></meta>
+        <meta name="description" content="Welcome to my portfolio!" />
 
         {/* 🔥 OPEN GRAPH (Facebook, LinkedIn, Google) */}
-        <meta property="og:title" content=""/>
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
+        <meta property="og:title" content="chanrey korn" />
+        <meta property="og:description" content="Welcome to my portfolio!" />
+        <meta
+          property="og:image"
+          content="https://www.chanreykorn.com/assets/photo_2026-04-20_19-01-51-BB9Yi7Af.webp"
+        />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
 
@@ -64,9 +67,12 @@ const HomePage = () => {
 
         {/* 🔥 TWITTER SEO */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:title" content="chanrey korn" />
+        <meta name="twitter:description" content="Welcome to my portfolio!" />
+        <meta
+          name="twitter:image"
+          content="https://www.chanreykorn.com/assets/photo_2026-04-20_19-01-51-BB9Yi7Af.webp"
+        />
 
         {/* 🔥 CANONICAL URL (Very important for Google) */}
         <link rel="canonical" href={url} />
@@ -83,6 +89,7 @@ const HomePage = () => {
         <SkillsIconGrid />
       </div>
       <SectionAboutPages />
+      <SectionContact />
       <Footer />
     </>
   );

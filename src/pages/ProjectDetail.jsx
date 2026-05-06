@@ -4,7 +4,7 @@ import projects from "../data/project.js";
 import Footer from "../components/Footer.jsx";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ProjectCard from "../components/ProjectCard.jsx";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -18,10 +18,10 @@ export default function ProjectDetail() {
 
   return (
     <>
-    
       <Helmet>
         {/* BASIC SEO */}
         <title>{project.title}</title>
+        <meta name="title" content={project.title}></meta>
         <meta name="description" content={project.description} />
 
         {/* 🔥 OPEN GRAPH (Facebook, LinkedIn, Google) */}

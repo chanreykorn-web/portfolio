@@ -26,17 +26,39 @@ function useInView(options = {}) {
 }
 
 export default function AboutPage() {
+  const url = `https://chanreykorn.com/about`;
   return (
     <>
       <Helmet>
         <title>About Us | Web Development Cambodia</title>
+
+        <meta name="description" content="Learn about our team..." />
+
+        <link rel="canonical" href={url} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
         <meta
-          name="description"
-          content="Learn about our team of passionate individuals delivering high-quality IT solutions and modern digital experiences. Discover our story, values, and commitment to excellence in web development and IT support."
+          property="og:title"
+          content="About Us | Web Development Cambodia"
         />
+        <meta property="og:description" content="Learn about our team..." />
+        <meta property="og:url" content={url} />
         <meta
-          name="keywords"
-          content="About Us, Team, Story, Values, IT Solutions, Digital Experiences, Web Development, IT Support"
+          property="og:image"
+          content="https://chanreykorn.com/photo-1555066931-4365d14bab8c.jpg"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Us | Web Development Cambodia"
+        />
+        <meta name="twitter:description" content="Learn about our team..." />
+        <meta
+          name="twitter:image"
+          content="https://chanreykorn.com/photo-1555066931-4365d14bab8c.jpg"
         />
       </Helmet>
       <BannerTamplate
@@ -70,7 +92,7 @@ export function SectionAboutPages() {
           }`}
         >
           <p
-            className={`uppercase text-gray-400 text-[10px] mb-2 transition-all duration-700 delay-100 ${
+            className={`class="uppercase text-gray-400 text-[10px] md:text-[12px] tracking-widest mb-2 transition-all duration-700 delay-100"${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"
@@ -80,7 +102,7 @@ export function SectionAboutPages() {
           </p>
 
           <h2
-            className={`text-3xl font-bold text-gray-800 mb-4 uppercase transition-all duration-700 delay-200 ${
+            className={`text-lg md:text-3xl font-bold text-gray-700 mb-4 uppercase transition-all duration-700 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"
@@ -90,7 +112,7 @@ export function SectionAboutPages() {
           </h2>
 
           <h4
-            className={`text-lg font-semibold text-gray-600 mb-3 transition-all duration-700 delay-300 ${
+            className={`text-sm md:text-xl font-semibold text-gray-500 mb-4 transition-all duration-700 delay-300 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"
@@ -100,7 +122,7 @@ export function SectionAboutPages() {
           </h4>
 
           <p
-            className={`text-gray-500 leading-relaxed mb-6 transition-all duration-700 delay-400 ${
+            className={`text-gray-600 text-[12px] md:text-[15px] leading-relaxed mb-6 transition-all duration-400 delay-400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"

@@ -55,7 +55,25 @@ export default function ContactPage() {
           "../../public/image/about-us-word-with-wooden-cubes-photo.webp"
         }
       />
+      <SectionContact />
       <Footer />
+    </>
+  );
+}
+
+export function SectionContact() {
+  return (
+    <>
+      <div className="w-full h-auto px-[6%] pb-[2%] sm:px-[15%] md:px-[10%] lg:px-[15%] z-50">
+        <form action="#" method="post">
+          <div className="grid gap-6 grid-cols-2 md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">
+            <div className="pt-5">
+              <label htmlFor="">Input Full Name</label>
+              <input type="text" />
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
