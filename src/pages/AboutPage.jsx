@@ -20,7 +20,7 @@ function useInView(options = {}) {
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [options]);
 
   return [ref, isVisible];
 }
